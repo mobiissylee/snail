@@ -20,6 +20,7 @@ void print_result()
 		printf("\n");
 	}
 	printf("\n\n");
+	printf("\n\n");
 }
 
 int main(void)
