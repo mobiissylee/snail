@@ -21,7 +21,7 @@ void print_result()
 
 int main(void)
 {
-	int i = 0, j = 0, value = 0, step=1, loop;
+	int i = 0, j = 0, value = 0, loop;
 
 	printf("숫자 입력 n*n :");
 	scanf_s("%d", &num);
@@ -33,15 +33,15 @@ int main(void)
 			arr[i][j] = 0;
 	}
 
-
+	// Processing
 	i = -1;  j = 0;
 	while (num > 0)
 	{
-		i = i + step; // i 고정
+		i++; // i 고정
 		loop = num;
 		for (; loop > 0; loop--) {
 			arr[i][j] = value++;
-			j += step;
+			j++;
 		}
 		j--; // j 고정
 		num--;
@@ -50,9 +50,8 @@ int main(void)
 		loop = num;
 		for (; loop > 0; loop--) {
 			arr[i][j] = value++;
-			i += step;
+			i++;
 		}
-		step *= -1;
 		
 		//------------------------------------------------------
 		
@@ -61,7 +60,7 @@ int main(void)
 		loop = num;
 		for (; loop > 0; loop--) {
 			arr[i][j] = value++;
-			j += step;
+			j--;
 		}
 		j++; // j 고정
 		num--;
@@ -70,9 +69,8 @@ int main(void)
 		loop = num;
 		for (; loop > 0; loop--) {
 			arr[i][j] = value++;
-			i += step;
+			i--;
 		}
-		step *= -1;
 		j++;
 	}
 	print_result();
