@@ -1,9 +1,12 @@
 // ConsoleApplication4.cpp : 콘솔 응용 프로그램에 대한 진입점을 정의합니다.
 //
 
-#include "stdafx.h"
+#include <stdio.h>
 
-int arr[100][100];
+#define MAX_NUM  100
+
+
+int arr[MAX_NUM][MAX_NUM];
 int num, num_n;
 
 void print_result()
@@ -23,8 +26,12 @@ int main(void)
 {
 	int i = 0, j = 0, value = 0, loop, step = 1;
 
-	printf("숫자 입력 n*n :");
-	scanf_s("%d", &num);
+	printf("Insert Number( N * N ) :\n");
+	scanf("%d", &num);
+	if( num > MAX_NUM ) {
+		printf(" Exceed maxmum number !! \n", MAX_NUM, num );
+		return -1;
+	}
 	num_n = num;
 
 	// Processing
