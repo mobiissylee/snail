@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#define MAX_NUM  100
+#define MAX_NUM  100     // maximum input number
 
 
 int arr[MAX_NUM][MAX_NUM];
