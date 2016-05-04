@@ -34,26 +34,26 @@ int main(void)
 	}
 
 	// Processing
-	i = 0;  j = 0;
+	i = 0;  j = -1;
 	while (num > 0)
 	{
+		//------------------------------------------------------
+		// i 고정
 		loop = num;
 		for (; loop > 0; loop--) {
-			arr[i][j] = value++;
 			j++;
+			arr[i][j] = value++;
 		}
-		j--; // j 고정
 		num--;
-
-		i++;
 		loop = num;
 		for (; loop > 0; loop--) {
-			arr[i][j] = value++;
 			i++;
+			arr[i][j] = value++;
 		}
-		i--; // i 고정
 		
 		//------------------------------------------------------
+		//------------------------------------------------------
+		// i 고정
 		loop = num;
 		for (; loop > 0; loop--) {
 			j--;
@@ -61,12 +61,12 @@ int main(void)
 		}
 		num--;
 
+		// j 고정
 		loop = num;
 		for (; loop > 0; loop--) {
 			i--;
 			arr[i][j] = value++;
 		}
-		j++;
 	}
 	print_result();
 	return 0;
